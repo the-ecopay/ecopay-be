@@ -70,13 +70,14 @@ Just an over-exerted example for basic understanding , don't copy from this:
 )
 
 
-# def generate_json_from_images(image_list):
-#     image_to_detect=['../images/waste1.webp']
-#     for image in image_list:
-#         image_data=image.read()
-#         pil_image=PILImage.open(BytesIO(image_data))
-#         image_to_detect.append(pil_image)
+def generate_json_from_images(image_list):
+    chat_session = model.start_chat(history=[])
+    image_to_detect=[]
+    for image in image_list:
+        image_data=image.read()
+        pil_image=PILImage.open(BytesIO(image_data))
+        image_to_detect.append(pil_image)
 
-chat_session = model.start_chat(history=[])
-response = chat_session.send_message(['../images/waste1.webp'])
-print(response.text)
+    response = chat_session.send_message(image_to_detect)
+    return response.text
+    
