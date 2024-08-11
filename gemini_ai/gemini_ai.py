@@ -9,7 +9,7 @@ genai.configure(api_key="AIzaSyDeEkaXQii54G7obTPFuqUyd3yVReBdUM4")
 generation_config = {
     "temperature": 0.3,
     "top_p": 0.15,
-    "top_k": 1,
+    "top_k": 3,
     "max_output_tokens": 8192,
     "response_mime_type": "text/plain",
 }
