@@ -35,13 +35,13 @@ model = genai.GenerativeModel(
     
 Just an over-exerted example for basic understanding , don't copy from this: 
 {
-    "Recyclable / Reusable objects": 
+    "Recyclable / Reusable Objects": 
     {
         "Sub-Category 1": ['item 1' , 'item 2' ],
         "Sub-Category 2" : ['item 1' , 'item 2']
     }
 
-    "Non Recyclable objects ":{
+    "Non Recyclable Objects ":{
         "Sub-Category  3" : [ 'item 1' ]
     }
 
@@ -52,19 +52,19 @@ Just an over-exerted example for basic understanding , don't copy from this:
     
     Notes:  
 
-    1. Your maximum image capacity will be 5 images at a time. Generate a single JSON code for all images if multiple images are provided.
+    1. Image may be focusing on single or multiple items at the same time. Take time to consider what to include in your response.
+
+    2. Your maximum image capacity will be 5 images at a time. Generate a single JSON code for all images if multiple images are provided.
      
-    2. For every item in image it could not focus on image what is meant to be focused on. The user will upload the image with intention of showing object
+    3. For every item in image it could not focus on image what is meant to be focused on. The user will upload the image with intention of showing object
      that he needs you to detect and categorize. Do not consider every item or item that seems to be incomplete in the image. 
      Try to add items that take more space in image and exclude those items in background.
     
     EXTRA IMPORTANT INSTRUCTIONS :
-    1. Re-check the JSON for possible mistakes , again we need to deliver the result with highest precision you can provide.
+    1. re-check the JSON for possible mistakes , again we need to deliver the result with highest precision you can provide.
 
     2. Try to not mix the same items in different categories. Again do the research and Try to reduce the errors in JSON because, 
     the functionaliy to work the JSON needs to be accurate.
-
-    3. Image may be focusing on single or multiple items at the same time. Take time to consider what to include in your response.
 
     """,
 )
@@ -80,4 +80,3 @@ def generate_json_from_images(image_list):
 
     response = chat_session.send_message(image_to_detect)
     return response.text
-    
