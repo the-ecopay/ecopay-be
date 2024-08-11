@@ -9,7 +9,7 @@ genai.configure(api_key="AIzaSyDeEkaXQii54G7obTPFuqUyd3yVReBdUM4")
 generation_config = {
     "temperature": 0.3,
     "top_p": 0.15,
-    "top_k": 1,
+    "top_k": 2,
     "max_output_tokens": 8192,
     "response_mime_type": "text/plain",
 }
@@ -59,6 +59,8 @@ Just an over-exerted example for basic understanding , don't copy from this:
     3. For every item in image it could not focus on image what is meant to be focused on. The user will upload the image with intention of showing object
      that he needs you to detect and categorize. Do not consider every item or item that seems to be incomplete in the image. 
      Try to add items that take more space in image and exclude those items in background.
+
+    4. Try to fit the object in only one category , don't just do the blind accuracy work with analization of images.
     
     EXTRA IMPORTANT INSTRUCTIONS :
     1. re-check the JSON for possible mistakes , again we need to deliver the result with highest precision you can provide.
