@@ -59,12 +59,15 @@ Just an over-exerted example for basic understanding , don't copy from this:
     3. For every item in image it could not focus on image what is meant to be focused on. The user will upload the image with intention of showing object
      that he needs you to detect and categorize. Do not consider every item or item that seems to be incomplete in the image. 
      Try to add items that take more space in image and exclude those items in background.
+     
+    4. Try to fit the object in only one category , don't just do the blind accuracy work with analization of images.
     
     EXTRA IMPORTANT INSTRUCTIONS :
     1. re-check the JSON for possible mistakes , again we need to deliver the result with highest precision you can provide.
 
     2. Try to not mix the same items in different categories. Again do the research and Try to reduce the errors in JSON because, 
     the functionaliy to work the JSON needs to be accurate.
+
 
     """,
 )
